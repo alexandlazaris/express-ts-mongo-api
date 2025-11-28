@@ -1,5 +1,14 @@
 # express-ts-mongo-api
 
+- [express-ts-mongo-api](#express-ts-mongo-api)
+  - [Built with](#built-with)
+  - [Running local](#running-local)
+  - [DB clients used](#db-clients-used)
+  - [MongoDB install](#mongodb-install)
+    - [Linux](#linux)
+    - [Mac](#mac)
+      - [Troubleshooting](#troubleshooting)
+  - [Authentication (TODO)](#authentication-todo)
 
 ## Built with
 
@@ -18,7 +27,7 @@
 * [Compass](https://www.mongodb.com/products/tools/compass)
 * [Atlas - Cloud hosted MongoDB](https://www.mongodb.com/products/platform)
 
-## Setup
+## MongoDB install
 
 ### Linux
 
@@ -77,3 +86,12 @@ child process started successfully, parent exiting
 Confirm server + port is running, use `lsof -i :27017`:
 
 `mongod  55926 user 10u  IPv4 0x59ed6a2a36a11d9d      0t0  TCP localhost:27017 (LISTEN)`
+
+
+## Authentication (TODO)
+
+Inegrate with [mojo auth](https://mojoauth.com/) for OTP authentication. 
+
+Authenticate with
+- Email OTP
+- SMS OTP
