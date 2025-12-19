@@ -1,11 +1,10 @@
-import { Schema, model } from 'mongoose';
+import { Schema, model, Document} from 'mongoose';
 
-export interface IUser {
+export interface IUser extends Document{
     name: string;
     email: string;
-    age?: number;
     password: string;
-    role?: 'user' | 'admin';
+    // role?: 'user' | 'admin';
     createdAt?: Date;
 }
 
@@ -29,7 +28,8 @@ const userSchema = new Schema<IUser>({
         type: String,
         required: [true, 'A password is required'],
         unique: true
-    }
+    },
+    createdAt: { type: Date,default: () => new Date()}
 }, { timestamps: true });
 
 export const User = model<IUser>('User', userSchema);
