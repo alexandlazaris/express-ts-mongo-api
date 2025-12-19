@@ -3,12 +3,15 @@
 - [express-ts-mongo-api](#express-ts-mongo-api)
   - [Built with](#built-with)
   - [Running local](#running-local)
+  - [Tests](#tests)
+  - [App design](#app-design)
   - [DB clients used](#db-clients-used)
   - [MongoDB install](#mongodb-install)
     - [Linux](#linux)
     - [Mac](#mac)
       - [Troubleshooting](#troubleshooting)
   - [Authentication (TODO)](#authentication-todo)
+  - [RBAC](#rbac)
 
 ## Built with
 
@@ -21,6 +24,15 @@
 
 > [!WARNING]
 > Requires local instance of MongoDB to be running. Remove `.template` & and populate MongoDB URI into `.env`. Re-run server to connect.
+
+## Tests
+
+`npm test`
+
+## App design
+
+- controllers: contain business logic used by api
+- routes: api endpoints used by client
 
 ## DB clients used
 
@@ -95,3 +107,13 @@ Inegrate with [mojo auth](https://mojoauth.com/) for OTP authentication.
 Authenticate with
 - Email OTP
 - SMS OTP
+
+## RBAC
+
+> [!WARNING]
+> Roles are still WIP. Minimal functionality so far. 
+
+Have started defining roles in db: admin & user
+
+
+
